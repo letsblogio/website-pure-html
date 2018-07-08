@@ -6,6 +6,7 @@
     <title>博客详情页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bulma.css"/>
+    <link href="fontawesome/css/font-awesome.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="debug.css"/> -->
     <style>
       .blog-detail {
@@ -34,8 +35,10 @@
         padding-bottom: 16px;
       }
       .author .content p{
-        margin-top: 4px;
-        margin-bottom: 4px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 13px;
+        font-weight: 300;
       }
       .author .image img {
         border-radius: 5px;
@@ -43,6 +46,9 @@
       .tags {
         padding-top: 0;
         padding-bottom: 16px;
+      }
+      .author p i {
+        margin-right: 8px;
       }
     </style>
 </head>
@@ -155,8 +161,8 @@
                       <div class="media-content">
                         <div class="content">
                           <p><span class="author-name">cmlanche</span></p>
-                          <p><span class="email">cmlanche@gmail</span></p>
-                          <p><a class="website" href="http://www.cmlanche.com">http://www.cmlanche.com</a></p>
+                          <p><span class="email"><i class="fa fa-envelope-o fa-fw"></i>cmlanche@gmail.com</span></p>
+                          <p><i class="fa fa-globe fa-fw"></i><a class="website" href="http://www.cmlanche.com">http://www.cmlanche.com</a></p>
                         </div>
                       </div>
                   </div>
