@@ -17,7 +17,26 @@
         margin: auto 8px;
         font-style: italic;
     }
-
+    .search {
+        width: 100%;
+    }
+    .search input{
+        width: 50%;
+        -webkit-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+        background-image: url('images/search.png');
+        background-position: 0.625rem 0.625rem;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        float: right;
+    }
+    .search .control{
+        width: 100%;
+    }
+    .search input:focus{
+        width: 100%;
+        box-shadow: 0 0 10rem rgba(0,0,0, 0.18);
+    }
     .newest-blogs {
         border-width: 1px;
         border-color:black;
@@ -124,26 +143,27 @@
               </div>
           
               <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="control has-icons-left has-icons-right search">
-                        <input class="input is-rounded is-hovered" type="email" placeholder="Email">
-                        <span class="icon is-small is-left">
+                <div class="navbar-item search">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-rounded is-hovered" type="email" placeholder="搜索博文、博主">
+                        <!-- <span class="icon is-small is-left">
                             <i class="fa fa-search"></i>
                         </span>
                         <span class="icon is-small is-right">
-                            <!-- <i class="fa fa-check"></i> -->
-                        </span>
+                        </span> -->
                     </div>
-                  <div class="field is-grouped">
-                    <p class="control">
-                      <a class="button is-white" href="">
-                        <span class="icon">
-                          <i class="fab fa-github"></i>
-                        </span>
-                        <span>登录</span>
-                      </a>
-                    </p>
-                  </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="button is-white" href="">
+                            <span class="icon">
+                                <i class="fab fa-github"></i>
+                            </span>
+                            <span>登录</span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
               </div>
             </div>
