@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>首页</title>
+    <title>首页 | 个人博客开放乐园</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bulma.css">
-    <link rel="stylesheet" href="fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
     <!-- <link rel="stylesheet" href="debug.css"> -->
     <script src="main.js"></script>
     <style>
@@ -29,7 +29,7 @@
         border-radius: 16px;        
     }
     .media .media-content .title {
-        color: black;
+        color: #333333;
         font-size: 14px;
         font-weight: bold;
         margin-bottom: 0.5rem;
@@ -39,7 +39,7 @@
         color: gray;
     }
     .blogerlist .media .media-content .title {
-        color: black;
+        color: #333333;
         font-size: 14px;
         font-weight: bold;
         margin-bottom: 0;
@@ -52,6 +52,21 @@
     }
     .search {
         margin: 0 16px;
+    }
+    .tags .tag span{
+        font-size: 6px;
+    }
+    .content-header {
+        margin: 0 0 24px 0;
+    }
+    .content-header a{
+        color: lightgray;
+    }
+    .content-header a:hover{
+        color: #333;
+    }
+    .content-header .operation{
+        float: right;
     }
     </style>
 </head>
@@ -71,7 +86,7 @@
           
             <div id="navbarBurgerMenu" class="navbar-menu">
               <div class="navbar-start">
-                <a class="navbar-item is-active" href="https://bulma.io/">
+                <a class="navbar-item is-active" href="index.html">
                   首页
                 </a>
                 <div class="navbar-item has-dropdown is-hoverable">
@@ -123,7 +138,7 @@
                     <p class="control">
                       <a class="button is-white" href="">
                         <span class="icon">
-                          <i class="fa fa-github"></i>
+                          <i class="fab fa-github"></i>
                         </span>
                         <span>登录</span>
                       </a>
@@ -139,11 +154,17 @@
         <div class="container is-widescreen">
             <div class="columns is-variable is-5">
                 <div class="column newest-blogs">
-                    <h2 class="title is-4">最新博文</h2>
+                    <div class="content-header">
+                        <span class="title is-4">最新博文</span>
+                        <div class="operation">
+                            <a class="icon is-medium" href="#"><i class="fas fa-sync-alt"></i></a>
+                            <a class="icon is-medium" href="#"><i class="fas fa-cog"></i></a>
+                        </div>
+                    </div>
                     <div class="field is-grouped is-grouped-multiline">
                         <div class="control">
                             <div class="tags has-addons">
-                                <a class="tag is-light">javafx(<em>20</em>)</a>
+                                <a class="tag is-light">javafx(<span>20</span>)</a>
                             </div>
                         </div>
                         <div class="control">
@@ -244,7 +265,13 @@
                     </ul>
                 </div>
                 <div class="column is-5 best-blogs">
-                    <h2 class="title is-4">精选博文</h2>
+                    <div class="content-header">
+                        <span class="title is-4">精选博文</span>
+                        <div class="operation">
+                            <a class="icon is-medium" href="#"><i class="fas fa-sync-alt"></i></a>
+                            <a class="icon is-medium" href="#"><i class="fas fa-cog"></i></a>
+                        </div>
+                    </div>
                     <div class="field is-grouped is-grouped-multiline">
                         <div class="control">
                             <div class="tags has-addons">
