@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title博客框架页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="bulma.css">
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <script src="main.js"></script>
+
+    <style>
+    .logo a span {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        margin: auto 8px;
+        font-style: italic;
+    }
+    .search {
+        margin: 0 16px;
+    }
+    .media .media-left img {
+        border-radius: 48px;        
+    }
+    .content .icon {
+        margin: 0 8px 0 0;
+    }
+    .content li{
+        margin: 8px 0;
+    }
+    .content li a {
+        font-style: italic;
+    }
+    .content {
+        font-size: 14px;
+    }
+    .content ul{
+        list-style: none;
+        margin: 0;
+    }
+    .blogers .card{
+        border-radius: 5px;
+    }
+    .blogers .card .card-image img{
+        border-radius: 5px 5px 0 0;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar is-link">
+            <div class="navbar-brand logo">
+                <a class="navbar-item" href="http://letsblog.io">
+                <span>Bloogle</span>
+                </a>
+                <div class="navbar-burger burger" data-target="navbarBurgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            </div>
+            
+            <div id="navbarBurgerMenu" class="navbar-menu">
+                <div class="navbar-start">
+                <a class="navbar-item" href="https://bulma.io/">
+                    首页
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/documentation/overview/start/">
+                        分类
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/documentation/overview/start/">
+                        前端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+                        后端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                        移动端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                        游戏
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+                        区块链
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item is-active" href="blog-framework.html">
+                    博客框架
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    站点收录
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    关于
+                </a>
+                </div>
+            
+                <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="control has-icons-left has-icons-right search">
+                        <input class="input is-rounded is-hovered" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <!-- <i class="fa fa-check"></i> -->
+                        </span>
+                    </div>
+                    <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-white" href="">
+                        <span class="icon">
+                            <i class="fa fa-github"></i>
+                        </span>
+                        <span>登录</span>
+                        </a>
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </nav>
+    </header>    
+
+    <section class="section">
+        <div class="container is-widescreen">
+            <div class="tabs is-centered">
+                <ul>
+                    <li class="is-active">
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-image" aria-hidden="true"></i></span>
+                            <span>Hexo</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-music" aria-hidden="true"></i></span>
+                            <span>Hugo</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-film" aria-hidden="true"></i></span>
+                            <span>Jeklly</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a>
+                            <span class="icon is-small"><i class="fa fa-wordpress" aria-hidden="true"></i></span>
+                            <span>WordPress</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 博主展示区域 -->
+    <section>
+        <div class="container is-widescreen blogers">
+            <div class="columns">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                            <img src="images/site-screenshot.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                <img src="images/author.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">cmlanche</p>
+                                <p class="subtitle is-6">@cmlanche</p>
+                            </div>
+                            </div>
+                        
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                            <span class="icon is-small"><i class="fa fa-globe"></i></span>
+                                            <a href="#">cmlanche.com</a>
+                                        </li>
+                                    <li>
+                                        <span class="icon is-small"><i class="fa fa-thermometer"></i></span>
+                                        <a href="#">next</a>
+                                    </li>
+                                
+                                    <li>
+                                        <span class="icon is-small"><i class="fa fa-sticky-note"></i></span>
+                                        <em>会当凌绝顶，一览众山小</em>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img src="images/site-screenshot.jpg" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                    <img src="images/author.jpg" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4">cmlanche</p>
+                                    <p class="subtitle is-6">@cmlanche</p>
+                                </div>
+                                </div>
+                            
+                                <div class="content">
+                                    <ul>
+                                            <li>
+                                                    <span class="icon is-small"><i class="fa fa-globe"></i></span>
+                                                    <a href="#">cmlanche.com</a>
+                                                </li>
+                                        <li>
+                                            <span class="icon is-small"><i class="fa fa-thermometer"></i></span>
+                                            <a href="#">next</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <span class="icon is-small"><i class="fa fa-sticky-note"></i></span>
+                                            <em>会当凌绝顶，一览众山小</em>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                            <div class="card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                    <img src="images/site-screenshot.jpg" alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img src="images/author.jpg" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">cmlanche</p>
+                                        <p class="subtitle is-6">@cmlanche</p>
+                                    </div>
+                                    </div>
+                                
+                                    <div class="content">
+                                        <ul>
+                                                <li>
+                                                        <span class="icon is-small"><i class="fa fa-globe"></i></span>
+                                                        <a href="#">cmlanche.com</a>
+                                                    </li>
+                                            <li>
+                                                <span class="icon is-small"><i class="fa fa-thermometer"></i></span>
+                                                <a href="#">next</a>
+                                            </li>
+                                            <li>
+                                                <span class="icon is-small"><i class="fa fa-sticky-note"></i></span>
+                                                <em>会当凌绝顶，一览众山小</em>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image is-4by3">
+                                        <img src="images/site-screenshot.jpg" alt="Placeholder image">
+                                        </figure>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                            <img src="images/author.jpg" alt="Placeholder image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4">cmlanche</p>
+                                            <p class="subtitle is-6">@cmlanche</p>
+                                        </div>
+                                        </div>
+                                    
+                                        <div class="content">
+                                            <ul>
+                                                    <li>
+                                                            <span class="icon is-small"><i class="fa fa-globe"></i></span>
+                                                            <a href="#">cmlanche.com</a>
+                                                        </li>
+                                                <li>
+                                                    <span class="icon is-small"><i class="fa fa-thermometer"></i></span>
+                                                    <a href="#">next</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <span class="icon is-small"><i class="fa fa-sticky-note"></i></span>
+                                                    <em>会当凌绝顶，一览众山小</em>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
