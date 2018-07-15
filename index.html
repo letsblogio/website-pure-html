@@ -22,8 +22,8 @@
     }
     .search input{
         width: 50%;
-        -webkit-transition: width 0.5s ease-in-out;
-        transition: width 0.5s ease-in-out;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
         background-image: url('images/search.png');
         background-position: 0.625rem 0.625rem;
         background-repeat: no-repeat;
@@ -35,7 +35,7 @@
     }
     .search input:focus{
         width: 100%;
-        box-shadow: 0 0 10rem rgba(0,0,0, 0.18);
+        box-shadow: 0 0 10rem rgba(0,0,0, 0.2);
     }
     .newest-blogs {
         border-width: 1px;
@@ -156,11 +156,11 @@
                 <div class="navbar-item">
                     <div class="field is-grouped">
                         <p class="control">
-                            <a class="button is-white" href="">
-                            <span class="icon">
-                                <i class="fab fa-github"></i>
-                            </span>
-                            <span>登录</span>
+                            <a class="button is-primary" href="">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>登录</span>
                             </a>
                         </p>
                     </div>
@@ -177,8 +177,8 @@
                     <div class="content-header">
                         <span class="title is-4">最新博文</span>
                         <div class="operation">
-                            <a class="icon is-medium" href="#"><i class="fas fa-sync-alt"></i></a>
-                            <a class="icon is-medium" href="#"><i class="fas fa-cog"></i></a>
+                            <a class="icon is-medium refresh" href="#"><i class="fas fa-sync-alt"></i></a>
+                            <a class="icon is-medium settings" id="newest-blogs-settings" href="#"><i class="fas fa-cog"></i></a>
                         </div>
                     </div>
                     <div class="field is-grouped is-grouped-multiline">
@@ -288,8 +288,8 @@
                     <div class="content-header">
                         <span class="title is-4">精选博文</span>
                         <div class="operation">
-                            <a class="icon is-medium" href="#"><i class="fas fa-sync-alt"></i></a>
-                            <a class="icon is-medium" href="#"><i class="fas fa-cog"></i></a>
+                            <a class="icon is-medium refresh" href="#"><i class="fas fa-sync-alt"></i></a>
+                            <a class="icon is-medium settings" id="best-blogs-settings" href="#"><i class="fas fa-cog"></i></a>
                         </div>
                     </div>
                     <div class="field is-grouped is-grouped-multiline">
@@ -454,6 +454,22 @@
                 </div>
             </div>
         </div>
+        <div class="modal blog-view-setting">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete close" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                <!-- Content ... -->
+                </section>
+                <footer class="modal-card-foot">
+                <button class="button is-link">保存</button>
+                <button class="button close">取消</button>
+                </footer>
+            </div>
+        </div>
     </section>
 </body>
 <script>
@@ -473,6 +489,35 @@ if ($navbarBurgers.length > 0) {
       $target.classList.toggle('is-active');
     });
   });
+}
+
+var operationElements = document.querySelectorAll(".operation .settings");
+if(operationElements){
+    operationElements.forEach(el=>{
+        el.addEventListener('click', ()=>{
+            var settingModels = document.getElementsByClassName("blog-view-setting");
+            if(settingModels && settingModels.length>0){
+                var model = settingModels[0];
+                model.classList.toggle("is-active");
+                var modelTitle = model.getElementsByClassName('modal-card-title')[0];
+                if('newest-blogs-settings' === el.id) {
+                    modelTitle.textContent = '最新博文浏览设置';
+                }
+                if('best-blogs-settings' === el.id) {
+                    modelTitle.textContent = '精选博文浏览设置';
+                }
+                var closeEls = model.getElementsByClassName('close');
+                if(closeEls){
+                    for(var i=0; i<closeEls.length; i++){
+                        var c = closeEls[i];
+                        c.addEventListener('click', ()=>{
+                            model.classList.remove('is-active');
+                        });
+                    }
+                }
+            }
+        })
+    })
 }
 });
 </script>
