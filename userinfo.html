@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>用户信息设置 | Bloogle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <!-- <link rel="stylesheet" href="debug.css"> -->
+    <script src="main.js"></script>
+    <style>
+    .logo a span {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        margin: auto 8px;
+        font-style: italic;
+    }
+    .search {
+        width: 100%;
+    }
+    .search input{
+        width: 50%;
+        font-size: 16px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        background-image: url('images/search.png');
+        background-position: 0.625rem 0.625rem;
+        background-repeat: no-repeat;
+        background-size: 1rem;
+        float: right;
+    }
+    .search .control{
+        width: 100%;
+    }
+    .search input:focus{
+        width: 100%;
+        box-shadow: 0 0 10rem rgba(0,0,0, 0.2);
+    }
+    .blogerlist li{
+        margin: 16px 0;
+    }
+    .search {
+        margin: 0 16px;
+    }
+    .setting-container .container{
+        background-color: gray;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar is-link">
+            <div class="navbar-brand logo">
+              <a class="navbar-item" href="http://letsblog.io">
+                <span>Bloogle</span>
+              </a>
+              <div class="navbar-burger burger" data-target="navbarBurgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          
+            <div id="navbarBurgerMenu" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item is-active" href="index.html">
+                  首页
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/documentation/overview/start/">
+                        分类
+                    </a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/documentation/overview/start/">
+                        前端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">
+                        后端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">
+                        移动端
+                        </a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/layout/container/">
+                        游戏
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item" href="https://bulma.io/documentation/form/general/">
+                        区块链
+                        </a>
+                    </div>
+                </div>
+                <a class="navbar-item" href="blog-framework.html">
+                    博客框架
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    站点收录
+                </a>
+                <a class="navbar-item" href="https://bulma.io/">
+                    关于
+                </a>
+              </div>
+          
+              <div class="navbar-end">
+                <div class="navbar-item search">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-rounded is-hovered" type="email" placeholder="搜索博文、博主">
+                        <!-- <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                        </span> -->
+                    </div>
+                </div>
+                <div class="navbar-item">
+                    <div class="field is-grouped">
+                        <p class="control">
+                            <a class="button is-primary" href="">
+                                <span class="icon">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                                <span>登录</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <section class="section">
+        <div class="container is-widescreen">
+            <div class="columns is-variable is-4">
+                <div class="column is-2">
+                    <div class="card">
+                        <div class="card-content">
+                            <aside class="menu">
+                                <p class="menu-label">
+                                    个人
+                                </p>
+                                <ul class="menu-list">
+                                    <li><a href="#" class="is-active">基本信息</a></li>
+                                    <li><a href="#">修改密码</a></li>
+                                    <li><a href="#">认证</a></li>
+                                </ul>
+                                <p class="menu-label">博客</p>
+                                <ul class="menu-list">
+                                    <li><a href="#">我的博客</a></li>
+                                    <li><a href="#">开放平台</a></li>
+                                </ul>
+                                <p class="menu-label">荣誉</p>
+                                <ul class="menu-list">
+                                    <li><a href="#">博客</a></li>
+                                    <li><a href="#">主题</a></li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-10 setting-container">
+                    <div class="card">
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal blog-view-setting">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                <p class="modal-card-title"></p>
+                <button class="delete close" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                <!-- Content ... -->
+                </section>
+                <footer class="modal-card-foot">
+                <button class="button is-link">保存</button>
+                <button class="button close">取消</button>
+                </footer>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+    });
+  });
+}
+
+var operationElements = document.querySelectorAll(".operation .settings");
+if(operationElements){
+    operationElements.forEach(el=>{
+        el.addEventListener('click', ()=>{
+            var settingModels = document.getElementsByClassName("blog-view-setting");
+            if(settingModels && settingModels.length>0){
+                var model = settingModels[0];
+                model.classList.toggle("is-active");
+                var modelTitle = model.getElementsByClassName('modal-card-title')[0];
+                if('newest-blogs-settings' === el.id) {
+                    modelTitle.textContent = '最新博文浏览设置';
+                }
+                if('best-blogs-settings' === el.id) {
+                    modelTitle.textContent = '精选博文浏览设置';
+                }
+                var closeEls = model.getElementsByClassName('close');
+                if(closeEls){
+                    for(var i=0; i<closeEls.length; i++){
+                        var c = closeEls[i];
+                        c.addEventListener('click', ()=>{
+                            model.classList.remove('is-active');
+                        });
+                    }
+                }
+            }
+        })
+    })
+}
+});
+</script>
+</html>
